@@ -24,6 +24,7 @@ after_initialize do
         object.user.custom_fields['signature_url'] if object.user
       end
     }
+  end
 
   # This is the code responsible for cooking a new advanced mode sig on user update
   DiscourseEvent.on(:user_updated) do |user|
