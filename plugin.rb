@@ -25,16 +25,6 @@ after_initialize do
       end
     }
 
-    # I guess this should be the default @ discourse. PR maybe?
-    add_to_serializer(:user, :custom_fields, true) {
-      if object.custom_fields == nil then
-        {}
-      else
-        object.custom_fields
-      end
-    }
-  end
-
   # This is the code responsible for cooking a new advanced mode sig on user update
   DiscourseEvent.on(:user_updated) do |user|
     if SiteSetting.signatures_enabled? && SiteSetting.signatures_advanced_mode && user.custom_fields['signature_raw']
