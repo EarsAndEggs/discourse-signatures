@@ -13,7 +13,7 @@ function attachSignature(api, siteSettings) {
     if (currentUser) {
       const enabled = currentUser.get('custom_fields.see_signatures');
       if (enabled) {
-		return null;
+	return null;
       }
 	}
 	if (siteSettings.signatures_advanced_mode) {
