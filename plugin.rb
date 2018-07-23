@@ -10,9 +10,6 @@ DiscoursePluginRegistry.serialized_current_user_fields << "see_signatures"
 DiscoursePluginRegistry.serialized_current_user_fields << "signature_url"
 DiscoursePluginRegistry.serialized_current_user_fields << "signature_raw"
 
-after_initialize do
-
-  User.register_custom_field_type('see_signatures', :boolean)
   User.register_custom_field_type('signature_url', :text)
   User.register_custom_field_type('signature_raw', :text)
 
